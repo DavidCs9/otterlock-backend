@@ -17,7 +17,7 @@ app.use(express.json());
 
 // Configurar CORS
 const corsOptions = {
-  origin: "https://otterlock-a3ax50423-davidcs9s-projects.vercel.app/", // Reemplaza con el origen de tu frontend
+  origin: "https://otterlock-a3ax50423-davidcs9s-projects.vercel.app", // Reemplaza con el origen de tu frontend
   credentials: true, // Permite el uso de cookies
 };
 app.use(cors(corsOptions));
