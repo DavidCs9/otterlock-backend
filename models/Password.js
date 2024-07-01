@@ -10,7 +10,7 @@ const PasswordSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  encryptedPassword: {
+  password: {
     type: String,
     required: true,
   },
