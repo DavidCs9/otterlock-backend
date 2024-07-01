@@ -22,3 +22,21 @@ exports.getPasswords = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+exports.deletePassword = async (req, res) => {
+  try {
+    await Password.findByIdAndDelete(req.params.id);
+    res.json({ message: "Password deleted" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+exports.updatePassword = async (req, res) => {
+  try {
+    await Password.findByIdAndUpdate(req.params.id, req.body);
+    res.json({ message: "Password updated" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
