@@ -5,7 +5,7 @@ exports.addPassword = async (req, res) => {
   try {
     const password = await Password.create({
       site,
-      password: encryptedPassword,
+      encryptedPassword,
       userId: req.user.userId,
     });
     res.status(201).json(password);
